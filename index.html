@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App</title>
+
+    <script>
+        let count = 0;
+
+
+        const sayHello =() => {
+            count ++;
+
+            for (let i = 0; i < count; i++) {
+                console.log("TAMADHIR");
+            }
+            
+        
+           /* if (count === 1) {
+                alert("Hello first time");
+            }else if (count === 2) {
+                alert("Hello second time");
+            }
+            else  {
+                alert("Hello!");
+            }*/
+        }    
+
+
+        window.onload = function () {
+
+            //even or odd
+            let number = parseInt(prompt("Enter a number to check if it's even or odd:"));
+            if (isNaN(number)) {
+                console.log("That's not a valid number.");
+            } else {
+                let result = (number % 2 === 0) ? "Even" : "Odd";
+                console.log(`The number ${number} is ${result}.`);
+            }
+
+
+            // Sum of Numbers from 1 to N
+            let n = parseInt(prompt("Enter a number to calculate the sum from 1 to N:"));
+            if (isNaN(n) || n < 1) {
+                console.log("Please enter a positive integer.");
+            } else {
+                 let sum = (n * (n + 1)) / 2;
+                 console.log(`The sum from 1 to ${n} is ${sum}.`);
+
+            }
+       
+
+
+            // Print Multiplication Table
+            let mulNum = parseInt(prompt("Enter a number to print its multiplication table:"));
+            if (isNaN(mulNum)) {
+                console.log("That's not a valid number.");
+            } else {
+             let table = `Multiplication Table for ${mulNum}:\n`;
+            for (let i = 1; i <= 10; i++) {
+            table += `${mulNum} x ${i} = ${mulNum * i}\n`;
+        }
+        console.log(table);
+      }
+
+    // Compare Two Numbers
+            let num1 = parseFloat(prompt("Enter the first number to compare:"));
+            let num2 = parseFloat(prompt("Enter the second number to compare:"));
+            if (isNaN(num1) || isNaN(num2)) {
+                console.log("Invalid input. Please enter two numbers.");
+            } else {
+            let larger = (num1 > num2) ? num1 : (num1 < num2 ? num2 : "Both are equal");
+            console.log(`The larger number is: ${larger}`);
+    }
+}
+        
+
+    </script>
+</head>
+<body>
+     <button onclick="sayHello()">Click Me</button>
+   
+</body>
+</html>
