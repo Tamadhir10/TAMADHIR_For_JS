@@ -1,18 +1,14 @@
-
-
-const check =() => {
-
-    // even and odd number 
+const check = () => {
+    // Even and odd number 
     let number = parseInt(document.getElementById("number").value);
     let result = document.getElementById("result");
-    if (number % 2 === 0){
+    if (number % 2 === 0) {
         result.innerHTML = number + " is even.";
     } else {
         result.innerHTML = number + " is odd.";
     }
-    // sum of the 1 to N w
 
-
+    // Sum of 1 to N
     let n = parseInt(document.getElementById("n").value);
     let sumResult = document.getElementById("sumResult");
     let sum = 0;    
@@ -21,37 +17,32 @@ const check =() => {
     }
     sumResult.innerHTML = "Sum of numbers from 1 to " + n + " is: " + sum;
 
-    //FizzBuzz
-
-for (let s = 1; s <= 100; s++) {
-    if (s % 3 === 0 && s % 5 === 0) {
-        console.log("FizzBuzz");
-    } else if (s % 3 === 0) {
-        console.log("Fizz");
-    } else if (s % 5 === 0) {
-        console.log("Buzz");
-    } else {
-        console.log(s);
+    // FizzBuzz
+    let fizzbuzzResult = document.getElementById("fizzbuzzResult");
+    let output = "";
+    for (let s = 1; s <= 100; s++) {
+        if (s % 3 === 0 && s % 5 === 0) {
+            output += "FizzBuzz, ";
+        } else if (s % 3 === 0) {
+            output += "Fizz, ";
+        } else if (s % 5 === 0) {
+            output += "Buzz, ";
+        } else {
+            output += s + ", ";
+        }
     }
+    fizzbuzzResult.innerHTML = output;
 
-    //Find the Largest Number
+    // Find the Largest Number
+    let num1 = parseInt(document.getElementById("num1").value);
+    let num2 = parseInt(document.getElementById("num2").value);
+    let largestResult = document.getElementById("largestResult");
+    largestResult.innerHTML = "Largest number is: " + Math.max(num1, num2);
 
-    result.innerHTML = "Largest number is: " + Math.max(...numbers);
-
-
-//Count Vowels in a String
-
+    // Count Vowels in a String
     let str = document.getElementById("string").value;
+    let vowelResult = document.getElementById("vowelResult");
     let vowels = str.match(/[aeiou]/gi);
     let count = vowels ? vowels.length : 0;
-    result.innerHTML = "Number of vowels in the string: " + count;
-
-}   
-
-console.log(checkEvenOdd());          
-console.log(findLargest([])); 
-console.log(countVowels()); 
-fizzBuzz(); 
-
-
+    vowelResult.innerHTML = "Number of vowels in the string: " + count;
 }
