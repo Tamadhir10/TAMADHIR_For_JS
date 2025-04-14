@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Operations</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 8px;
+            margin: 5px 0;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Reverse Array</h2>
+        <input type="text" id="arrayInput" placeholder="Enter numbers separated by commas">
+        <button onclick="reverseArrayAndDisplay()">Reverse Array</button>
+        <div id="reverseResult" class="result"></div>
+    </div>
+
+    <div class="container">
+        <h2>Filter Positive Numbers</h2>
+        <input type="text" id="filterInput" placeholder="Enter numbers separated by commas">
+        <button onclick="filterPositiveAndDisplay()">Filter Positive</button>
+        <div id="filterResult" class="result"></div>
+    </div>
+
+    <div class="container">
+        <h2>Sum of Array</h2>
+        <input type="text" id="sumInput" placeholder="Enter numbers separated by commas">
+        <button onclick="sumArrayAndDisplay()">Calculate Sum</button>
+        <div id="sumResult" class="result"></div>
+    </div>
+
+    <div class="container">
+        <h2>Count Word Occurrences</h2>
+        <input type="text" id="wordInput" placeholder="Enter text">
+        <button onclick="countWordsAndDisplay()">Count Words</button>
+        <div id="wordResult" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
