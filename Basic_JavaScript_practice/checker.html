@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Checker</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #2a2a2a;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            color: #00ff00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+        }
+
+        input {
+            background: #333;
+            border: 2px solid #00ff00;
+            color: #00ff00;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 10px;
+            outline: none;
+            font-family: 'Courier New', monospace;
+        }
+
+        button {
+            background: #00ff00;
+            color: #1a1a1a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #00cc00;
+            transform: scale(1.05);
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            min-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Even or Odd Number Checker</h2>
+        <input type="number" id="number" placeholder="Enter a number">
+        <button onclick="check()">Check</button>
+        <p id="result"></p>
+    </div>
+    <br>
+    <div class="container">
+        <h2>Sum of 1 to N</h2>
+        <input type="number" id="n" placeholder="Enter a number">
+        <button onclick="check()">Calculate Sum</button>
+        <p id="sumResult"></p>
+    </div>
+    <br>
+    <div class="FizzBuzz">
+        <h2>FizzBuzz</h2>
+        <input type="number" id="fizzbuzz" placeholder="Enter a number">
+        <button onclick="check()">Check FizzBuzz</button>
+        <p id="fizzbuzzResult"></p>
+    </div>
+    <br>
+    <div class="Find the Largest Number">
+        <h2>Find the Largest Number</h2>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <button onclick="check()">Find Largest</button>
+        <p id="largestResult"></p>
+    </div>
+    <br>
+    <div class="Count Vowels in a String">
+        <h2>Count Vowels in a String</h2>
+        <input type="text" id="string" placeholder="Enter a string">
+        <button onclick="check()">Count Vowels</button>
+        <p id="vowelResult"></p>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
