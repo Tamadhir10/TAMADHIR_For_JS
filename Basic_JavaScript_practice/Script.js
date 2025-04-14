@@ -44,6 +44,19 @@ const largNumber = () => {
 }
 
 
+//Count Vowels in a String
+
+const countVowels = () => {
+    let str = document.getElementById("string").value;
+    let vowels = str.match(/[aeiou]/gi);
+    let count = vowels ? vowels.length : 0;
+    result.innerHTML = "Number of vowels in the string: " + count;
+}
+
+console.log(checkEvenOdd());          
+console.log(findLargest([])); 
+console.log(countVowels()); 
+fizzBuzz(); 
 
 
 }
