@@ -34,24 +34,19 @@ for (let s = 1; s <= 100; s++) {
         console.log(s);
     }
 
-}   
+    //Find the Largest Number
 
-
-//Find the Largest Number
-
-const largNumber = () => {
     result.innerHTML = "Largest number is: " + Math.max(...numbers);
-}
 
 
 //Count Vowels in a String
 
-const countVowels = () => {
     let str = document.getElementById("string").value;
     let vowels = str.match(/[aeiou]/gi);
     let count = vowels ? vowels.length : 0;
     result.innerHTML = "Number of vowels in the string: " + count;
-}
+
+}   
 
 console.log(checkEvenOdd());          
 console.log(findLargest([])); 
