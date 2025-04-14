@@ -37,5 +37,13 @@ for (let s = 1; s <= 100; s++) {
 }   
 
 
+//Find the Largest Number
+
+const largNumber = () => {
+    result.innerHTML = "Largest number is: " + Math.max(...numbers);
+}
+
+
+
 
 }
