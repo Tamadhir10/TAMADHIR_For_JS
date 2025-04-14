@@ -10,7 +10,6 @@ const check =() => {
     } else {
         result.innerHTML = number + " is odd.";
     }
-
     // sum of the 1 to N w
 
 
@@ -23,38 +22,6 @@ const check =() => {
     sumResult.innerHTML = "Sum of numbers from 1 to " + n + " is: " + sum;
 
     
-//FizzBuzz
 
-for (let s = 1; s <= 100; s++) {
-    if (s % 3 === 0 && s % 5 === 0) {
-        console.log("FizzBuzz");
-    } else if (s % 3 === 0) {
-        console.log("Fizz");
-    } else if (s % 5 === 0) {
-        console.log("Buzz");
-    } else {
-        console.log(s);
-    }
 
-}   
-
-//Find the Largest Number
-
-const largNumber = () => {
-    result.innerHTML = "Largest number is: " + Math.max(...numbers);
-}
-
-//Count Vowels in a String
-
-const countVowels = () => {
-    let str = document.getElementById("string").value;
-    let vowels = str.match(/[aeiou]/gi);
-    let count = vowels ? vowels.length : 0;
-    result.innerHTML = "Number of vowels in the string: " + count;
-}
-
-console.log(checkEvenOdd());          
-console.log(findLargest([])); 
-console.log(countVowels()); 
-fizzBuzz(); 
 }
