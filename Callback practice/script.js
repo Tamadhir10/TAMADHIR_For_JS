@@ -64,7 +64,12 @@ function handleArrayProcess() {
     }
 }
 // Simulate API Call 
-
+function handleApiCall() {
+    document.getElementById("apiOutput").textContent = "Loading...";
+    getData((data) => {
+        document.getElementById("apiOutput").textContent = `Received: ${JSON.stringify(data)}`;
+    });
+}
 
 // Nested Callbacks
 
