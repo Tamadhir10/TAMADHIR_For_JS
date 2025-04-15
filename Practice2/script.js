@@ -55,3 +55,29 @@ function sumArrayAndDisplay() {
     resultBox.textContent = 'Sum of array: ' + sum;
 }
 
+//Function to count words
+function countWordsAndDisplay() {
+    let input = document.getElementById('wordInput').value;
+    
+    let words = input.toLowerCase().split(' ');
+    
+    let wordCount = {};
+    
+    for(let i = 0; i < words.length; i++) {
+        let word = words[i];
+        if(wordCount[word]) {
+            wordCount[word] = wordCount[word] + 1;
+        } else {
+            wordCount[word] = 1;
+        }
+    }
+    
+    let result = '';
+    for(let word in wordCount) {
+        result += word + ': ' + wordCount[word] + ', ';
+    }
+    
+    let resultBox = document.getElementById('wordResult');
+    resultBox.textContent = 'Word count: ' + result;
+}
+
