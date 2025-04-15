@@ -64,11 +64,25 @@ function handleArrayProcess() {
     }
 }
 // Simulate API Call 
-function handleApiCall() {
+function handleApiCall(callback) {
     document.getElementById("apiOutput").textContent = "Loading...";
     getData((data) => {
         document.getElementById("apiOutput").textContent = `Received: ${JSON.stringify(data)}`;
+        if (callback) {
+            callback(data);
+        }
     });
+}
+
+function getData(callback) {
+    // Simulating API call with setTimeout
+    setTimeout(() => {
+        const data = {
+            id: 1,
+            message: "Hello from API"
+        };
+        callback(data);
+    }, 2000);
 }
 
 // Nested Callbacks
@@ -88,7 +102,7 @@ function handleLogin() {
     });
 }
 
-//Error Handling in Callbacks
+
 // Division with Error Handling
 function divideWithError(a, b, successCallback, errorCallback) {
     if (b === 0) {
