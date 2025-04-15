@@ -73,3 +73,49 @@ function handleApiCall() {
 
 // Nested Callbacks
 
+function handleLogin() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    document.getElementById("loginOutput").textContent = "Processing...";
+    
+    login(username, password, (loginData) => {
+        fetchUser(loginData.userId, (userData) => {
+            fetchSettings(userData.id, (settingsData) => {
+                document.getElementById("loginOutput").textContent = 
+                    `Complete! User: ${userData.name}, Theme: ${settingsData.theme}`;
+            });
+        });
+    });
+}
+
+//Error Handling in Callbacks
+// Division with Error Handling
+function divideWithError(a, b, successCallback, errorCallback) {
+    if (b === 0) {
+        errorCallback("Cannot divide by zero!");
+    } else {
+        successCallback(a / b);
+    }
+}
+
+function handleDivision() {
+    const num1 = parseFloat(document.getElementById("divNum1").value);
+    const num2 = parseFloat(document.getElementById("divNum2").value);
+
+    // Input validation
+    if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById("divOutput").textContent = "Error: Please enter valid numbers";
+        return;
+    }
+
+    divideWithError(
+        num1,
+        num2,
+        (result) => {
+            document.getElementById("divOutput").textContent = `Result: ${result}`;
+        },
+        (error) => {
+            document.getElementById("divOutput").textContent = `Error: ${error}`;
+        }
+    );
+}
