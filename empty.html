@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="container"> 
+<p id="txt">a</p>
+
+</div>
+
+
+<button onclick="sayHello()">Click me</button>
+<button onclick="changeColor()">Change Color</button>
+<button onclick="changeFont()">Change Font</button>
+<button onclick="UpdateParagraph()">Add Paragraph</button>
+<button onclick="DeleteParagraph()">Delete Paragraph</button>
+
+
+
+<script>
+function sayHello() {
+    console.log("clicked");
+
+   let n = document.getElementById("txt").innerText;
+   
+    if (n === "a") {
+        document.getElementById("txt").innerText = "b";
+
+    }else if (n === "b") {
+        document.getElementById("txt").innerText = "a";
+    }
+}
+
+
+function changeColor() {
+        document.getElementById("txt").style.color = "red";
+ 
+}
+
+function changeFont() {
+    document.getElementById("txt").style.fontSize = "24px";
+
+}
+
+
+function UpdateParagraph(){
+    let newParagraph = document.createElement("p"); 
+    newParagraph.innerText = "This is a new paragraph.";
+    document.getElementById("container").appendChild(newParagraph);
+    newParagraph.style.color = "blue";
+}
+
+function DeleteParagraph() {
+    let paragraphs = document.querySelectorAll("#container p");
+    if (paragraphs.length > 0) {
+        paragraphs[paragraphs.length - 1].remove();
+   } else {
+       console.log("No paragraphs to delete.");
+    }
+
+
+}
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
