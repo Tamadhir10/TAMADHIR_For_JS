@@ -38,3 +38,33 @@ function handleCalculation() {
         document.getElementById("calcOutput").textContent = `Result: ${result}`;
     });
 }
+
+
+// Array Processing
+function processArray(arr, callback) {
+    return arr.map(callback);
+}
+
+function handleArrayProcess() {
+    
+    const input = document.getElementById("arrayInput").value;
+    const numbers = input.split(",").map(num => Number(num.trim()));
+
+    if (!numbers.every(num => !isNaN(num))) {
+        document.getElementById("arrayOutput").textContent = "Error: Please enter valid numbers";
+        return;
+    }
+
+    try {
+        
+        const result = processArray(numbers, num => num * 2);
+        document.getElementById("arrayOutput").textContent = `Processed Array: ${result.join(", ")}`;
+    } catch (error) {
+        document.getElementById("arrayOutput").textContent = `Error: ${error.message}`;
+    }
+}
+// Simulate API Call 
+
+
+// Nested Callbacks
+
