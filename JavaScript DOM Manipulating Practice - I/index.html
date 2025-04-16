@@ -58,7 +58,14 @@ function CreateandAppendElement(){
     newText.style.fontSize = "40px";
 }
 
-
+function RemoveElement() {
+    let paragraphs = document.querySelectorAll("#container p");
+    if (paragraphs.length > 0) {
+        paragraphs[paragraphs.length - 1].remove();
+   } else {
+       console.log("No paragraphs to delete.");
+    }
+}
 
 
 </script>
