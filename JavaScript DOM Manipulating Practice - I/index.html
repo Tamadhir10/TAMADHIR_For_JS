@@ -2,15 +2,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript DOM Manipulating Practice - I</title>
 </head>
 <body>
-<button onclick="ChangeTextContent()">Click me</button>
-<button onclick="ChangeStyle()">Click me</button>
-<button onclick="ShowOrHideElement()">Click me</button>
-<button onclick="CreateandAppendElement()">Click me</button>
-<button onclick="RemoveElement()">Click me</button>
+<h1>JavaScript DOM Manipulating Practice - I</h1>
+<div id="container">   
+    <p id="txt">Tamadhir</p>    
+</div>
+<br>
+<button onclick="ChangeTextContent()">change text content</button>
+<br>
+<button onclick="ChangeStyle()">change style</button>
+<br>
+<button onclick="ShowOrHideElement()">show / hide</button>
+<br>
+<button onclick="CreateandAppendElement()">append</button>
+<br>
+<button onclick="RemoveElement()">remove</button>
+<br>
 
+
+<script>
+
+    
+function ChangeTextContent() {
+    let text = document.getElementById("txt").innerText;
+   
+    if (text === "Tamadhir") {
+        document.getElementById("txt").innerText = "TAMADHIR";
+
+    }else if (text === "TAMADHIR") {
+        document.getElementById("txt").innerText = "Tamadhir";
+    }
+}
+
+
+</script>
     
 </body>
 </html>
