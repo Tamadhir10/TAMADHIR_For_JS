@@ -93,6 +93,7 @@
     <button onclick="DisableButtonAfterClicking()">Disable a Button After Clicking</button>
     <button onclick="InputFieldFocusAndBlurEffects()">Input Field Focus & Blur Effects</button>
     <button onclick="AlertInputValue()">Get Alert</button>
+    <button onclick="ChangeBackgroundColor()">Change Background Color</button>
 
 </div>
     
@@ -202,6 +203,16 @@
             alert(inputField.value);
         };
     }
+
+
+    function ChangeBackgroundColor() {
+        let container = document.getElementById("container");
+        let colors = ["#67aec2", "#e37514", "#451113", "#eb7c82", "#91eb7c"];
+        let randomColor = colors[Math.floor(Math.random() * colors.length)];
+        container.style.backgroundColor = randomColor;
+    }
+
+    
 
 
 
