@@ -92,6 +92,7 @@
     <button onclick="UpdateACounterOnButtonClick()">Update a Counter on Button Click</button>
     <button onclick="DisableButtonAfterClicking()">Disable a Button After Clicking</button>
     <button onclick="InputFieldFocusAndBlurEffects()">Input Field Focus & Blur Effects</button>
+    <button onclick="AlertInputValue()">Get Alert</button>
 
 </div>
     
@@ -180,6 +181,29 @@
             inputField.style.boxShadow = "none";
         };
     }
+
+    function AlertInputValue(){
+        let inputField = document.createElement("input");
+        inputField.type = "text";
+        inputField.placeholder = "Type something...";
+        inputField.style.padding = "10px";
+        inputField.style.borderRadius = "5px";
+        inputField.style.border = "1px solid #3498db";
+        
+        document.getElementById("container").appendChild(inputField);
+        
+        let button = document.createElement("button");
+        button.innerText = "Alert Input Value";
+        button.style.marginTop = "10px";
+        
+        document.getElementById("container").appendChild(button);
+        
+        button.onclick = function() {
+            alert(inputField.value);
+        };
+    }
+
+
 
 
 
