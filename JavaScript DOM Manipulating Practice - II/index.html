@@ -84,6 +84,12 @@
     <h1>JavaScript DOM Manipulating Practice - II</h1>
     <img id="img" src="./images.jpg" alt="Tamadhir" style="display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
     <p id="txt">We said above that the subject can be either<br> contained in the verb or follow it.</p>
+    <ul id ="list">
+        <li>black</li>
+        <li>Pink</li>
+        <li>Yellow</li>
+        <li>Blue</li>
+    </ul>
 <div id="container">
     <button onclick="ChangeTitleContent()">change Title content</button>
     <button onclick="ChangeImageAltText()">change Image Alt Text</button>
@@ -94,6 +100,7 @@
     <button onclick="InputFieldFocusAndBlurEffects()">Input Field Focus & Blur Effects</button>
     <button onclick="AlertInputValue()">Get Alert</button>
     <button onclick="ChangeBackgroundColor()">Change Background Color</button>
+    <button onclick="HighlightListItems()">Highlight List Items</button>
 
 </div>
     
@@ -212,7 +219,25 @@
         container.style.backgroundColor = randomColor;
     }
 
-    
+    function HighlightListItems() {
+        // Use the correct selector to target li elements within the ul with id="list"
+        let listItems = document.querySelectorAll("#list li");
+        
+        listItems.forEach(item => {
+            // Add styling with better color contrast and smooth transition
+            item.style.backgroundColor = "#f39c12";
+            item.style.color = "#ffffff";  // White text for better readability
+            item.style.padding = "10px 15px";
+            item.style.margin = "5px 0";
+            item.style.borderRadius = "8px";
+            item.style.transition = "all 0.3s ease";
+            item.style.cursor = "pointer";
+            item.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
+            
+        });
+    }
+
+
 
 
 
