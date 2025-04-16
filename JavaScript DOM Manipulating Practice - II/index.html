@@ -90,6 +90,8 @@
     <button onclick="ChangeButtonTextWhenClicked()">Change Button Text When Clicked</button>
     <button onclick="ToggleParagraphFontSize()">Toggle Paragraph Font Size</button>
     <button onclick="UpdateACounterOnButtonClick()">Update a Counter on Button Click</button>
+    <button onclick="DisableButtonAfterClicking()">Disable a Button After Clicking</button>
+    <button onclick="InputFieldFocusAndBlurEffects()">Input Field Focus & Blur Effects</button>
 
 </div>
     
@@ -146,6 +148,41 @@
             counter.innerText = "Button clicked " + count + " times.";
         };
     }
+
+    function DisableButtonAfterClicking() {
+        let button = document.querySelector("button:nth-of-type(6)");
+        button.onclick = function() {
+            button.disabled = true;
+            button.innerText = "Button Disabled";
+            button.style.backgroundColor = "#7f8c8d";
+            button.style.cursor = "not-allowed";
+        };
+    }
+
+    function InputFieldFocusAndBlurEffects() {
+        let inputField = document.createElement("input");
+        inputField.type = "text";
+        inputField.placeholder = "Focus on me!";
+        inputField.style.padding = "10px";
+        inputField.style.borderRadius = "5px";
+        inputField.style.border = "1px solid #3498db";
+        inputField.style.transition = "all 0.3s ease";
+        
+        document.getElementById("container").appendChild(inputField);
+        
+        inputField.onfocus = function() {
+            inputField.style.borderColor = "#2980b9";
+            inputField.style.boxShadow = "0 0 5px rgba(41, 128, 185, 0.5)";
+        };
+        
+        inputField.onblur = function() {
+            inputField.style.borderColor = "#3498db";
+            inputField.style.boxShadow = "none";
+        };
+    }
+
+
+
 
 </script>
 </body>
