@@ -82,12 +82,13 @@
 </head>
 <body>
     <h1>JavaScript DOM Manipulating Practice - II</h1>
-
+    <img id="img" src="./images.jpg" alt="Tamadhir" style="display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <p id="txt">We said above that the subject can be either contained in the verb or follow it.</p>
 <div id="container">
     <button onclick="ChangeTitleContent()">change Title content</button>
     <button onclick="ChangeImageAltText()">change Image Alt Text</button>
-    <img id="img" src="./images.jpg" alt="Tamadhir" style="display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-
+    <button onclick="ChangeButtonTextWhenClicked()">Change Button Text When Clicked</button>
+    <button onclick="ToggleParagraphFontSize()">Toggle Paragraph Font Size</button>
 
 </div>
     
@@ -110,6 +111,25 @@
             document.getElementById("img").alt = "TAMADHIR TASK";
         }else if (image === "TAMADHIR TASK") {
             document.getElementById("img").alt = "Tamadhir";
+        }
+    }
+
+    function ChangeButtonTextWhenClicked() {
+        let button = document.querySelector("button:nth-of-type(3)");
+        let text = button.innerText;
+        if (text === "Change Button Text When Clicked") {
+            button.innerText = "Clikc to Change";
+        }else if (text === "Clikc to Change") {
+            button.innerText = "Change Button Text When Clicked";
+        }
+    }
+
+    function ToggleParagraphFontSize() {
+        let paragraph = document.getElementById("txt");
+        if (paragraph.style.fontSize === "25px") {
+            paragraph.style.fontSize = "30px";
+        }else if (paragraph.style.fontSize === "30px") {
+            paragraph.style.fontSize = "25px";
         }
     }
 
