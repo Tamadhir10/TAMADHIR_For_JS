@@ -104,6 +104,9 @@
     <button onclick="ShowOrHidePassword()">Show/Hide Password</button>
     <button onclick="PrefillInputField()">Pre-fill Input Field</button>
     <button onclick="UppercaseConverter()">Uppercase Converter</button>
+    <input type="color" onchange="SimpleColorPicker(this)">
+    <div class="box" id="boxColor"></div>
+    
 
 </div>
     
@@ -300,6 +303,26 @@
         
         button.onclick = function() {
             alert(inputField.value.toUpperCase());
+        };
+    }
+
+    function SimpleColorPicker() {
+        let colorPicker = document.createElement("boxColor");
+        colorPicker.type = "color";
+        colorPicker.style.padding = "10px";
+        colorPicker.style.borderRadius = "5px";
+        colorPicker.style.border = "1px solid #3498db";
+        
+        document.getElementById("container").appendChild(colorPicker);
+        
+        let button = document.createElement("button");
+        button.innerText = "Pick a Color";
+        button.style.marginTop = "10px";
+        
+        document.getElementById("container").appendChild(button);
+        
+        button.onclick = function() {
+            document.body.style.backgroundColor = colorPicker.value;
         };
     }
 
