@@ -101,6 +101,7 @@
     <button onclick="AlertInputValue()">Get Alert</button>
     <button onclick="ChangeBackgroundColor()">Change Background Color</button>
     <button onclick="HighlightListItems()">Highlight List Items</button>
+    <button onclick="ShowOrHidePassword()">Show/Hide Password</button>
 
 </div>
     
@@ -237,6 +238,33 @@
         });
     }
 
+
+    function ShowOrHidePassword() {
+        let passwordField = document.createElement("input");
+        passwordField.type = "password";
+        passwordField.placeholder = "Enter Password";
+        passwordField.style.padding = "10px";
+        passwordField.style.borderRadius = "5px";
+        passwordField.style.border = "1px solid #3498db";
+        
+        document.getElementById("container").appendChild(passwordField);
+        
+        let button = document.createElement("button");
+        button.innerText = "Show/Hide Password";
+        button.style.marginTop = "10px";
+        
+        document.getElementById("container").appendChild(button);
+        
+        button.onclick = function() {
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                button.innerText = "Hide Password";
+            } else {
+                passwordField.type = "password";
+                button.innerText = "Show Password";
+            }
+        };
+    }
 
 
 
