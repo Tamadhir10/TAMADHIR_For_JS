@@ -83,7 +83,7 @@
 <body>
     <h1>JavaScript DOM Manipulating Practice - II</h1>
     <img id="img" src="./images.jpg" alt="Tamadhir" style="display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <p id="txt">We said above that the subject can be either contained in the verb or follow it.</p>
+    <p id="txt">We said above that the subject can be either<br> contained in the verb or follow it.</p>
 <div id="container">
     <button onclick="ChangeTitleContent()">change Title content</button>
     <button onclick="ChangeImageAltText()">change Image Alt Text</button>
@@ -123,16 +123,14 @@
             button.innerText = "Change Button Text When Clicked";
         }
     }
-
     function ToggleParagraphFontSize() {
-        let paragraph = document.getElementById("txt");
-        if (paragraph.style.fontSize === "25px") {
+        let paragraph = document.getElementById("txt"); 
+        if (!paragraph.style.fontSize || paragraph.style.fontSize === "24px") {
             paragraph.style.fontSize = "30px";
-        }else if (paragraph.style.fontSize === "30px") {
-            paragraph.style.fontSize = "25px";
+        } else {
+            paragraph.style.fontSize = "24px";
         }
     }
-
 
 </script>
 </body>
