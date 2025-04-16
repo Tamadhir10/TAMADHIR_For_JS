@@ -89,6 +89,7 @@
     <button onclick="ChangeImageAltText()">change Image Alt Text</button>
     <button onclick="ChangeButtonTextWhenClicked()">Change Button Text When Clicked</button>
     <button onclick="ToggleParagraphFontSize()">Toggle Paragraph Font Size</button>
+    <button onclick="UpdateACounterOnButtonClick()">Update a Counter on Button Click</button>
 
 </div>
     
@@ -130,6 +131,20 @@
         } else {
             paragraph.style.fontSize = "24px";
         }
+    }
+
+    function UpdateACounterOnButtonClick() {
+        let counter = document.createElement("p");
+        counter.id = "counter";
+        counter.innerText = "Button clicked 0 times.";
+        document.getElementById("container").appendChild(counter);
+        
+        let count = 0;
+        let button = document.querySelector("button:nth-of-type(5)");
+        button.onclick = function() {
+            count++;
+            counter.innerText = "Button clicked " + count + " times.";
+        };
     }
 
 </script>
